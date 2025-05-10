@@ -44,13 +44,6 @@
 - Prometheus로 TPS, latency, 알림 전송 성공률, 에러율 수집
 - Grafana로 대시보드 시각화
 
-### 6. API
-- REST API 엔드포인트:
-  - `/api/tickets/reserve`
-  - `/api/tickets/status`
-  - `/api/notifications/register`
-- 컨슈머 중심 설계, OpenAPI 스펙 문서화
-
 ---
 
 ## 시스템 아키텍처
@@ -95,41 +88,3 @@
 
 ---
 
-
-## 설치 및 실행
-
-### 사전 요구사항
-- Java 17+
-- Docker
-- AWS 계정 (SNS, EC2)
-- Kubernetes 클러스터 (예: AWS EKS)
-- Kafka 브로커
-- MySQL, Redis 인스턴스
-
-### 실행 방법
-1. 리포지토리 클론:
-   ```bash
-   git clone https://github.com/your-repo/ticket-reservation-system.git
-   ```
-2. 환경 변수 설정:
-   ```bash
-   export AWS_ACCESS_KEY_ID=your-key
-   export AWS_SECRET_ACCESS_KEY=your-secret
-   ```
-3. 애플리케이션 빌드 및 실행:
-   ```bash
-   ./gradlew build
-   java -jar build/libs/ticket-reservation.jar
-   ```
-4. Kubernetes 배포:
-   ```bash
-   kubectl apply -f k8s/deployment.yaml
-   ```
-
----
-
-## 라이선스
-
-MIT License. 자세한 내용은 [LICENSE](./LICENSE) 파일을 참조하세요.
-
----
